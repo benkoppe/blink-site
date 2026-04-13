@@ -112,12 +112,12 @@
 		</div>
 
 		<h1 class="mb-6 text-6xl leading-[1.05] font-black tracking-[-0.03em] text-[#111] sm:text-7xl">
-			You blink.<br />Your space changes.
+			Change spaces,<br /> with a Blink.
 		</h1>
 
 		<p class="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#737373]">
-			Every macOS space switch wastes 0.5 seconds. On ProMotion screens, a full second. There's no
-			native fix — until Blink.
+			Every macOS space switch wastes 0.5 seconds.<br />On ProMotion screens, a full second. Blink
+			is the native fix.
 		</p>
 
 		<div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
