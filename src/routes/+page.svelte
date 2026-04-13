@@ -408,7 +408,7 @@
 						Download the <code class="rounded bg-white px-1.5 py-0.5 font-mono text-xs text-[#111]"
 							>Blink.dmg</code
 						>
-						file from the latest release and drag Blink into your Applications folder.
+						file using the Download button and drag Blink into your Applications folder.
 					</p>
 				</div>
 
