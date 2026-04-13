@@ -177,7 +177,7 @@
 						/>
 					{/if}
 				</svg>
-				{brewCopied ? 'Copied!' : 'brew install --cask benkoppe/tap/blink'}
+				brew install --cask benkoppe/tap/blink
 			</button>
 		</div>
 	</div>
