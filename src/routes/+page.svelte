@@ -46,42 +46,51 @@
 		}
 	];
 
-	const alternatives = [
+	// To add/remove a column: edit `comparisonColumns` only.
+	// To add/remove a row: edit `comparisonRows` only.
+	const comparisonColumns: { key: string; label: string }[] = [
+		{ key: 'instant', label: 'Instant' },
+		{ key: 'free', label: 'Free' },
+		{ key: 'nativespaces', label: 'Native Spaces' },
+		{ key: 'nosip', label: 'No SIP Needed' },
+		{ key: 'missioncontrol', label: 'Mission Control' }
+	];
+
+	const comparisonRows: { name: string; highlight?: boolean; values: Record<string, boolean> }[] = [
 		{
 			name: 'Blink',
-			instant: true,
-			free: true,
-			nativespaces: true,
-			nosip: true,
-			missioncontrol: true,
-			highlight: true
+			highlight: true,
+			values: { instant: true, free: true, nativespaces: true, nosip: true, missioncontrol: true }
 		},
 		{
 			name: 'BetterTouchTool',
-			instant: true,
-			free: false,
-			nativespaces: true,
-			nosip: true,
-			missioncontrol: false,
-			highlight: false
+			values: {
+				instant: true,
+				free: false,
+				nativespaces: true,
+				nosip: true,
+				missioncontrol: false
+			}
 		},
 		{
 			name: 'yabai',
-			instant: false,
-			free: true,
-			nativespaces: true,
-			nosip: false,
-			missioncontrol: false,
-			highlight: false
+			values: {
+				instant: false,
+				free: true,
+				nativespaces: true,
+				nosip: false,
+				missioncontrol: false
+			}
 		},
 		{
 			name: 'AeroSpace',
-			instant: true,
-			free: true,
-			nativespaces: false,
-			nosip: true,
-			missioncontrol: false,
-			highlight: false
+			values: {
+				instant: true,
+				free: true,
+				nativespaces: false,
+				nosip: true,
+				missioncontrol: false
+			}
 		}
 	];
 </script>
@@ -277,78 +286,38 @@
 							class="py-3 pr-8 text-left text-xs font-medium tracking-widest text-[#737373] uppercase"
 							>App</th
 						>
-						<th
-							class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>Instant</th
-						>
-						<th
-							class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>Free</th
-						>
-						<th
-							class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>Native Spaces</th
-						>
-						<th
-							class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>No SIP Needed</th
-						>
-						<th
-							class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>Mission Control</th
-						>
+						{#each comparisonColumns as col}
+							<th
+								class="px-4 py-3 text-center text-xs font-medium tracking-widest text-[#737373] uppercase"
+								>{col.label}</th
+							>
+						{/each}
 					</tr>
 				</thead>
 				<tbody>
-					{#each alternatives as alt}
-						<tr class="border-b border-[#2a2a2a] {alt.highlight ? 'bg-white/5' : ''}">
+					{#each comparisonRows as row}
+						<tr class="border-b border-[#2a2a2a] {row.highlight ? 'bg-white/5' : ''}">
 							<td
-								class="py-4 pr-8 pl-3 font-semibold {alt.highlight
+								class="py-4 pr-8 pl-3 font-semibold {row.highlight
 									? 'text-white'
 									: 'text-[#737373]'}"
 							>
-								{alt.name}
-								{#if alt.highlight}
+								{row.name}
+								{#if row.highlight}
 									<span class="ml-2 rounded-sm bg-white px-1.5 py-0.5 text-xs font-bold text-[#111]"
 										>You're here</span
 									>
 								{/if}
 							</td>
-							<td class="px-4 py-4 text-center">
-								{#if alt.instant}
-									<span class="text-white">✓</span>
-								{:else}
-									<span class="text-[#3a3a3a]">✗</span>
-								{/if}
-							</td>
-							<td class="px-4 py-4 text-center">
-								{#if alt.free}
-									<span class="text-white">✓</span>
-								{:else}
-									<span class="text-[#3a3a3a]">✗</span>
-								{/if}
-							</td>
-							<td class="px-4 py-4 text-center">
-								{#if alt.nativespaces}
-									<span class="text-white">✓</span>
-								{:else}
-									<span class="text-[#3a3a3a]">✗</span>
-								{/if}
-							</td>
-							<td class="px-4 py-4 text-center">
-								{#if alt.nosip}
-									<span class="text-white">✓</span>
-								{:else}
-									<span class="text-[#3a3a3a]">✗</span>
-								{/if}
-							</td>
-							<td class="px-4 py-4 text-center">
-								{#if alt.missioncontrol}
-									<span class="text-white">✓</span>
-								{:else}
-									<span class="text-[#3a3a3a]">✗</span>
-								{/if}
-							</td>
+							{#each comparisonColumns as col}
+								<td class="px-4 py-4 text-center">
+									{#if row.values[col.key]}
+										<span class="text-white">✓</span>
+									{:else}
+										<span class="text-[#3a3a3a]">✗</span>
+									{/if}
+								</td>
+							{/each}
 						</tr>
 					{/each}
 				</tbody>
