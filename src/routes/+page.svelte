@@ -193,7 +193,7 @@
 
 	<!-- VIDEO COMPARISON -->
 	<div class="mx-auto mt-16 max-w-6xl">
-		<div class="overflow-hidden rounded-t-2xl bg-[#111]">
+		<div class="overflow-hidden rounded-2xl bg-[#111]">
 			<div class="grid grid-cols-1 sm:grid-cols-2">
 				<!-- Before -->
 				<div class="border-b border-[#2a2a2a] sm:border-r sm:border-b-0">
