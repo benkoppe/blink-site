@@ -118,7 +118,7 @@
 </header>
 
 <!-- HERO -->
-<section class="bg-white px-6 pt-24 pb-0 text-center">
+<section class="bg-white px-6 pt-14 pb-0 text-center">
 	<div class="mx-auto max-w-3xl">
 		<div
 			class="mb-6 inline-block rounded-full border border-[#e5e5e5] px-4 py-1.5 text-xs font-medium tracking-widest text-[#737373] uppercase"
