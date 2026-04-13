@@ -302,7 +302,11 @@
 				<tbody>
 					{#each alternatives as alt}
 						<tr class="border-b border-[#2a2a2a] {alt.highlight ? 'bg-white/5' : ''}">
-							<td class="py-4 pr-8 font-semibold {alt.highlight ? 'text-white' : 'text-[#737373]'}">
+							<td
+								class="py-4 pr-8 pl-3 font-semibold {alt.highlight
+									? 'text-white'
+									: 'text-[#737373]'}"
+							>
 								{alt.name}
 								{#if alt.highlight}
 									<span class="ml-2 rounded-sm bg-white px-1.5 py-0.5 text-xs font-bold text-[#111]"
