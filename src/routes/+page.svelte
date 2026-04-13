@@ -193,50 +193,30 @@
 
 	<!-- VIDEO COMPARISON -->
 	<div class="mx-auto mt-16 max-w-6xl">
-		<div class="overflow-hidden rounded-t-2xl bg-[#111]">
+		<div class="overflow-hidden rounded-2xl bg-[#111]">
 			<div class="grid grid-cols-1 sm:grid-cols-2">
 				<!-- Before -->
-				<div class="relative border-b border-[#2a2a2a] sm:border-r sm:border-b-0">
-					<div class="flex items-center gap-2 border-b border-[#2a2a2a] px-5 py-3">
-						<span class="h-2 w-2 rounded-full bg-[#ef4444]"></span>
-						<span class="text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>Without Blink</span
-						>
+				<div class="border-b border-[#2a2a2a] sm:border-r sm:border-b-0">
+					<div class="flex items-center gap-3 border-b border-[#2a2a2a] px-5 py-4">
+						<span class="h-3 w-3 shrink-0 rounded-full bg-[#ef4444]"></span>
+						<div>
+							<div class="text-sm font-semibold text-[#999]">Without Blink</div>
+							<div class="text-xs text-[#555]">0.5-1s per switch</div>
+						</div>
 					</div>
-					<video src="/videos/before.mp4" autoplay loop muted playsinline class="w-full"> </video>
+					<video src="/videos/before.mp4" autoplay loop muted playsinline class="w-full"></video>
 				</div>
 				<!-- After -->
-				<div class="relative">
-					<div class="flex items-center gap-2 border-b border-[#2a2a2a] px-5 py-3">
-						<span class="h-2 w-2 rounded-full bg-[#22c55e]"></span>
-						<span class="text-xs font-medium tracking-widest text-[#737373] uppercase"
-							>With Blink</span
-						>
+				<div>
+					<div class="flex items-center gap-3 border-b border-[#2a2a2a] px-5 py-4">
+						<img src="/icon.png" alt="Blink icon" class="h-8 w-8 shrink-0 rounded-[8px]" />
+						<div class="flex flex-col items-start">
+							<div class="text-sm font-semibold text-white">With Blink</div>
+							<div class="text-xs text-[#555]">Instant</div>
+						</div>
 					</div>
-					<video src="/videos/after.mp4" autoplay loop muted playsinline class="w-full"> </video>
+					<video src="/videos/after.mp4" autoplay loop muted playsinline class="w-full"></video>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- STAT BAR -->
-<section class="border-y border-[#e5e5e5] bg-[#f5f5f5]">
-	<div class="mx-auto max-w-6xl px-6">
-		<div
-			class="grid grid-cols-1 divide-y divide-[#e5e5e5] sm:grid-cols-3 sm:divide-x sm:divide-y-0"
-		>
-			<div class="px-8 py-8 text-center">
-				<div class="mb-1 text-4xl font-black tracking-tight text-[#111]">0.5s</div>
-				<div class="text-sm text-[#737373]">wasted per space switch on macOS</div>
-			</div>
-			<div class="px-8 py-8 text-center">
-				<div class="mb-1 text-4xl font-black tracking-tight text-[#111]">1.0s</div>
-				<div class="text-sm text-[#737373]">on ProMotion (120 Hz) MacBook Pros</div>
-			</div>
-			<div class="px-8 py-8 text-center">
-				<div class="mb-1 text-4xl font-black tracking-tight text-[#111]">&lt;10 MB</div>
-				<div class="text-sm text-[#737373]">total app size</div>
 			</div>
 		</div>
 	</div>
