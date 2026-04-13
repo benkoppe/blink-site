@@ -212,7 +212,7 @@
 			</div>
 			<div class="px-8 py-8 text-center">
 				<div class="mb-1 text-4xl font-black tracking-tight text-[#111]">&lt;10 MB</div>
-				<div class="text-sm text-[#737373]">total app size. Zero footprint.</div>
+				<div class="text-sm text-[#737373]">total app size</div>
 			</div>
 		</div>
 	</div>
