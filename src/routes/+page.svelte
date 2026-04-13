@@ -177,7 +177,7 @@
 						/>
 					{/if}
 				</svg>
-				brew install --cask benkoppe/tap/blink
+				{BREW_COMMAND}
 			</button>
 		</div>
 	</div>
