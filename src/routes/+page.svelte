@@ -1,5 +1,5 @@
 <script lang="ts">
-	const DOWNLOAD_URL = 'https://github.com/benkoppe/Blink/releases/latest';
+	const DOWNLOAD_URL = 'https://github.com/benkoppe/Blink/releases/latest/download/Blink.dmg';
 	const GITHUB_URL = 'https://github.com/benkoppe/Blink';
 	const BREW_COMMAND = 'brew install --cask benkoppe/tap/blink';
 
