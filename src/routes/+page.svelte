@@ -135,7 +135,9 @@
 			Free &amp; Open Source · macOS
 		</div>
 
-		<h1 class="mb-6 text-6xl leading-[1.05] font-black tracking-[-0.03em] text-[#111] sm:text-7xl">
+		<h1
+			class="mb-6 text-5xl leading-[1.05] font-black tracking-[-0.03em] text-[#111] sm:text-6xl lg:text-7xl"
+		>
 			Change spaces,<br /> with a Blink.
 		</h1>
 
@@ -144,10 +146,10 @@
 			is the native fix.
 		</p>
 
-		<div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+		<div class="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
 			<a
 				href={DOWNLOAD_URL}
-				class="inline-flex items-center gap-2 rounded-md bg-[#111] px-7 py-3.5 text-base font-semibold text-white hover:bg-[#333]"
+				class="inline-flex items-center justify-center gap-2 rounded-md bg-[#111] px-7 py-3.5 text-base font-semibold text-white hover:bg-[#333]"
 			>
 				<svg
 					width="16"
@@ -165,7 +167,7 @@
 			</a>
 			<button
 				onclick={copyBrew}
-				class="inline-flex items-center gap-2 rounded-md border border-[#e5e5e5] bg-[#f5f5f5] px-5 py-3.5 font-mono text-sm text-[#111] hover:border-[#111] hover:bg-white"
+				class="inline-flex min-w-0 items-center gap-2 overflow-hidden rounded-md border border-[#e5e5e5] bg-[#f5f5f5] px-5 py-3.5 font-mono text-sm text-[#111] hover:border-[#111] hover:bg-white"
 			>
 				<svg
 					width="14"
@@ -186,7 +188,7 @@
 						/>
 					{/if}
 				</svg>
-				{BREW_COMMAND}
+				<span class="min-w-0 truncate">{BREW_COMMAND}</span>
 			</button>
 		</div>
 	</div>
@@ -278,7 +280,7 @@
 					{#each comparisonRows as row}
 						<tr class="border-b border-[#2a2a2a] {row.highlight ? 'bg-white/5' : ''}">
 							<td
-								class="py-4 pr-8 pl-3 font-semibold {row.highlight
+								class="py-4 pr-8 pl-3 font-semibold whitespace-nowrap {row.highlight
 									? 'text-white'
 									: 'text-[#737373]'}"
 							>
@@ -344,8 +346,11 @@
 			<div class="flex flex-col gap-6">
 				<div>
 					<div class="mb-3 text-sm font-semibold text-[#111]">Install with Homebrew</div>
-					<div class="flex items-center gap-3 rounded-md border border-[#e5e5e5] bg-white p-4">
-						<code class="flex-1 font-mono text-sm text-[#111]">{BREW_COMMAND}</code>
+					<div
+						class="flex min-w-0 items-center gap-3 rounded-md border border-[#e5e5e5] bg-white p-4"
+					>
+						<code class="min-w-0 flex-1 truncate font-mono text-sm text-[#111]">{BREW_COMMAND}</code
+						>
 						<button
 							onclick={copyBrew}
 							class="shrink-0 rounded border border-[#e5e5e5] px-3 py-1.5 text-xs font-medium text-[#737373] hover:border-[#111] hover:text-[#111]"
