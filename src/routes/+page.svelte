@@ -196,7 +196,7 @@
 		<div class="overflow-hidden rounded-2xl bg-[#111]">
 			<div class="grid grid-cols-1 sm:grid-cols-2">
 				<!-- Before -->
-				<div class="border-b border-[#2a2a2a] sm:border-r sm:border-b-0">
+				<div class="border-b border-[#555] sm:border-r sm:border-b-0">
 					<div class="flex items-center gap-3 border-b border-[#2a2a2a] px-5 py-4">
 						<span class="h-3 w-3 shrink-0 rounded-full bg-[#ef4444]"></span>
 						<div>
